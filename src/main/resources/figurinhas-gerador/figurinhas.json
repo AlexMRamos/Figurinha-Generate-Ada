@@ -1,0 +1,120 @@
+[
+    {
+        "imagem": "img 1",
+        "descricao": "desc 1",
+        "raridade": "1",
+        "preco": 22.2
+    },
+    {
+        "imagem": "img 2",
+        "descricao": "desc 2",
+        "raridade": "2",
+        "preco": 22.2
+    },
+    {
+        "imagem": "img 3",
+        "descricao": "desc 3",
+        "raridade": "2",
+        "preco": 22.2
+    },
+    {
+        "imagem": "img 4",
+        "descricao": "desc 4",
+        "raridade": "2",
+        "preco": 22.2
+    },    {
+        "imagem": "img 5",
+        "descricao": "desc 5",
+        "raridade": "3",
+        "preco": 22.2
+    },
+    {
+        "imagem": "img 6",
+        "descricao": "desc 6",
+        "raridade": "3",
+        "preco": 22.2
+    },
+    {
+        "imagem": "img 7",
+        "descricao": "desc 7",
+        "raridade": "3",
+        "preco": 22.2
+    },
+    {
+        "imagem": "img 8",
+        "descricao": "desc 8",
+        "raridade": "3",
+        "preco": 22.2
+    },
+    {
+        "imagem": "img 9",
+        "descricao": "desc 9",
+        "raridade": "3",
+        "preco": 22.2
+    },
+    {
+        "imagem": "img 10",
+        "descricao": "desc 10",
+        "raridade": "3",
+        "preco": 22.2
+    },
+    {
+        "imagem": "img 11",
+        "descricao": "desc 11",
+        "raridade": "4",
+        "preco": 22.2
+    },
+    {
+        "imagem": "img 12",
+        "descricao": "desc 12",
+        "raridade": "4",
+        "preco": 22.2
+    },
+    {
+        "imagem": "img 13",
+        "descricao": "desc 13",
+        "raridade": "4",
+        "preco": 22.2
+    },
+    {
+        "imagem": "img 14",
+        "descricao": "desc 14",
+        "raridade": "4",
+        "preco": 22.2
+    },    {
+        "imagem": "img 15",
+        "descricao": "desc 15",
+        "raridade": "4",
+        "preco": 22.2
+    },
+    {
+        "imagem": "img 16",
+        "descricao": "desc 16",
+        "raridade": "4",
+        "preco": 22.2
+    },
+    {
+        "imagem": "img 17",
+        "descricao": "desc 17",
+        "raridade": "4",
+        "preco": 22.2
+    },
+    {
+        "imagem": "img 18",
+        "descricao": "desc 18",
+        "raridade": "4",
+        "preco": 22.2
+    },
+    {
+        "imagem": "img 19",
+        "descricao": "desc 19",
+        "raridade": "4",
+        "preco": 22.2
+    },
+    {
+        "imagem": "img 20",
+        "descricao": "desc 20",
+        "raridade": "4",
+        "preco": 22.2
+    }
+]

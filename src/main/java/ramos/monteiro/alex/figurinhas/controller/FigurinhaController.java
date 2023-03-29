@@ -4,12 +4,14 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import ramos.monteiro.alex.figurinhas.entity.Figurinha;
+import ramos.monteiro.alex.figurinhas.model.PacoteFigurinha;
 import ramos.monteiro.alex.figurinhas.service.impl.FigurinhaServiceImpl;
 
 @RestController
@@ -20,10 +22,15 @@ public class FigurinhaController {
 	private FigurinhaServiceImpl service;
 	
 	@PostMapping("/gerar-figurinha")
-    public ResponseEntity<List<Figurinha>> findById(@RequestParam("id") String albumId) {
+    public ResponseEntity<List<Figurinha>> gerarFigurinhaAlbum(@RequestParam("id") String albumId) {
             return ResponseEntity.ok(service.gerarFigurinhas(albumId));
 
         }	
+	
+	@GetMapping("/pacote")
+	public ResponseEntity<PacoteFigurinha> gerarPacoteFigurinha(){
+		return ResponseEntity.ok(service.gerarPacoteFigurinha());
+	}
 	
 	
 	

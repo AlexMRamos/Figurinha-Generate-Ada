@@ -30,7 +30,7 @@ public class Figurinha {
 	private Double preco;
 	
 	@NotEmpty
-	private String AlbumID;
+	private String albumID;
 	
 
 }

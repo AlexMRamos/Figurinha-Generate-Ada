@@ -13,6 +13,6 @@ public interface FigurinhaService {
 	
 	List<Figurinha> gerarFigurinhas(String albumId);
 	
-	List<PacoteFigurinha> gerarPacoteFigurinha(String albumId);
+	PacoteFigurinha gerarPacoteFigurinha();
 
 }

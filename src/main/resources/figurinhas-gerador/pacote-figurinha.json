@@ -1,0 +1,44 @@
+{
+   "pacoteFigurinha":[
+      {
+         "id":"1",
+         "imagem":"figurinha1.png",
+         "descricao":"Descrição da figurinha 1",
+         "raridade":"comum",
+         "preco":1.0,
+         "albumID":"1"
+      },
+      {
+         "id":"2",
+         "imagem":"figurinha2.png",
+         "descricao":"Descrição da figurinha 2",
+         "raridade":"comum",
+         "preco":1.0,
+         "albumID":"1"
+      },
+      {
+         "id":"3",
+         "imagem":"figurinha3.png",
+         "descricao":"Descrição da figurinha 3",
+         "raridade":"comum",
+         "preco":1.0,
+         "albumID":"1"
+      },
+      {
+         "id":"4",
+         "imagem":"figurinha4.png",
+         "descricao":"Descrição da figurinha 4",
+         "raridade":"comum",
+         "preco":1.0,
+         "albumID":"1"
+      },
+      {
+         "id":"5",
+         "imagem":"figurinha5.png",
+         "descricao":"Descrição da figurinha 5",
+         "raridade":"comum",
+         "preco":1.0,
+         "albumID":"1"
+      }
+   ]
+}
