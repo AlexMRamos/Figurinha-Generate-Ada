@@ -1,0 +1,9 @@
+spring:
+  data:
+    mongodb:
+      database: figurinhas
+      host: localhost
+      password: example
+      port: 27017
+      uri: mongodb://root:example@localhost:27017
+      username: root
