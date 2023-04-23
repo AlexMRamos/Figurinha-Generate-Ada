@@ -7,3 +7,31 @@ spring:
       port: 27017
       uri: mongodb://root:example@localhost:27017
       username: root
+           
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      key-deserializer: org.apache.kafka.common.serialization.StringSerializer
+      value-deserializer: org.apache.kafka.common.serialization.StringSerializer
+      group-id: group_id
+      
+    consumer:
+      group-id: group_id
+      bootstrap-servers: localhost:9092
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      
+#Common Kafka Properties
+auto:
+  create:
+    topics:
+      enable: true
+topic:
+  name:
+    producer: album-generate
+    consumer: album-generate
+      
+    
+
+

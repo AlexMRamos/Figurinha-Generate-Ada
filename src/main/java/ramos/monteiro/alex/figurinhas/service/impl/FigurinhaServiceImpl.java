@@ -1,24 +1,21 @@
 package ramos.monteiro.alex.figurinhas.service.impl;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.lang.reflect.Type;
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.fasterxml.jackson.core.exc.StreamReadException;
-import com.fasterxml.jackson.databind.DatabindException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import ramos.monteiro.alex.figurinhas.entity.Figurinha;
+import ramos.monteiro.alex.figurinhas.kafka.producer.TopicProducer;
 import ramos.monteiro.alex.figurinhas.model.PacoteFigurinha;
+import ramos.monteiro.alex.figurinhas.model.ProduceForAlbum;
 import ramos.monteiro.alex.figurinhas.repository.FigurinhaRepository;
 import ramos.monteiro.alex.figurinhas.service.FigurinhaService;
 
@@ -27,13 +24,40 @@ public class FigurinhaServiceImpl implements FigurinhaService {
 
 	@Autowired
 	private FigurinhaRepository repository;
+	
+	@Autowired
+	private TopicProducer producer;
 
+	private String kafka = null;
+	
+	Gson gson = new Gson();
+	
 	@Override
 	public List<Figurinha> gerarFigurinhas(String albumId) {
+		
+		ProduceForAlbum message = new ProduceForAlbum();
+		message.setAlbumId(albumId);
+		message.setStatus(false);
 
-		List<Figurinha> figurinhas = this.gerador(albumId);
-		repository.saveAll(figurinhas);
-		return figurinhas;
+		try {
+			List<Figurinha> figurinhas = this.gerador(albumId);
+			repository.saveAll(figurinhas);
+			
+			message.setStatus(true);
+			message.setMessage("Criado com Sucesso");
+			
+			
+			this.kafka = gson.toJson(message);
+
+			return figurinhas;
+			
+		} catch (Exception e) {
+			message.setMessage("Erro na criação do Album: " + e.getMessage());
+			kafka = gson.toJson(message);
+			throw new RuntimeException(e);
+		}finally {
+			producer.send(kafka);
+		}
 
 	}
 
